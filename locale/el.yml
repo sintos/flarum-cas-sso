@@ -1,0 +1,4 @@
+uoi-cas-sso:
+  forum:
+    log_in:
+      with_cas_button: Σύνδεση με SSO Πανεπιστημίου

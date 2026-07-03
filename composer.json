@@ -1,0 +1,26 @@
+{
+    "name": "uoi/flarum-cas-sso",
+    "description": "CAS SSO authentication for Flarum using the University SSO service.",
+    "type": "flarum-extension",
+    "license": "MIT",
+    "require": {
+        "flarum/core": "^1.8",
+        "apereo/phpcas": "^1.6"
+    },
+    "autoload": {
+        "psr-4": {
+            "Uoi\\FlarumCasSso\\": "src/"
+        }
+    },
+    "extra": {
+        "flarum-extension": {
+            "title": "University CAS SSO",
+            "category": "authentication",
+            "icon": {
+                "name": "fas fa-university",
+                "backgroundColor": "#154a7d",
+                "color": "#fff"
+            }
+        }
+    }
+}
