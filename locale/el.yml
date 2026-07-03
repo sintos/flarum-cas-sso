@@ -1,4 +1,20 @@
 uoi-cas-sso:
+  admin:
+    settings:
+      cas_host_label: CAS host
+      cas_host_help: Μόνο hostname, χωρίς https://. Παράδειγμα: sso.uoi.gr
+      cas_port_label: CAS port
+      cas_port_help: Συνήθως 443 για HTTPS.
+      cas_context_label: CAS context path
+      cas_context_help: Συνήθως /cas.
+      cas_version_label: Έκδοση CAS protocol
+      cas_version_help: Υποστηρίζονται οι τιμές 1.0, 2.0 και 3.0. Χρησιμοποίησε 2.0 εκτός αν το SSO team πει κάτι άλλο.
+      email_domain_label: Fallback email domain
+      email_domain_help: Χρησιμοποιείται όταν ο CAS δεν επιστρέφει mail/email attribute.
+      cas_ca_cert_label: Διαδρομή CAS CA certificate
+      cas_ca_cert_help: Απόλυτη διαδρομή certificate στον server. Άφησέ το κενό μόνο για δοκιμές.
+      disable_server_validation_label: Απενεργοποίηση CAS server certificate validation
+      disable_server_validation_help: Ενεργοποίησέ το μόνο για δοκιμές ή μέχρι να ρυθμιστεί το σωστό CA certificate path.
   forum:
     log_in:
       with_cas_button: Σύνδεση με SSO Πανεπιστημίου
