@@ -1,6 +1,6 @@
 import app from 'flarum/admin/app';
 
-app.initializers.add('uoi/flarum-cas-sso', () => {
+export default function extend() {
   app.extensionData
     .for('uoi-cas-sso')
     .registerSetting({
@@ -51,4 +51,4 @@ app.initializers.add('uoi/flarum-cas-sso', () => {
       help: app.translator.trans('uoi-cas-sso.admin.settings.disable_server_validation_help'),
       type: 'boolean',
     });
-});
+}

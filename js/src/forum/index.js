@@ -3,7 +3,7 @@ import LogInButtons from 'flarum/forum/components/LogInButtons';
 import Button from 'flarum/common/components/Button';
 import { extend } from 'flarum/common/extend';
 
-app.initializers.add('uoi/flarum-cas-sso', () => {
+export default function registerCasLoginButton() {
   extend(LogInButtons.prototype, 'items', function (items) {
     items.add(
       'uoi-cas',
@@ -20,4 +20,4 @@ app.initializers.add('uoi/flarum-cas-sso', () => {
       )
     );
   });
-});
+}
