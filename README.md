@@ -16,12 +16,6 @@ Enable the extension from the Flarum admin panel.
 
 ## Settings
 
-After enabling the extension, configure it from:
-
-```text
-Admin Panel -> Extensions -> University CAS SSO
-```
-
 The extension defaults to:
 
 - CAS host: `sso.uoi.gr`
@@ -32,7 +26,7 @@ The extension defaults to:
 - CAS CA certificate: empty
 - disable CAS server certificate validation: enabled
 
-The same values are stored as Flarum settings:
+Configure the extension through the Flarum `settings` table:
 
 ```sql
 INSERT INTO settings (`key`, `value`) VALUES

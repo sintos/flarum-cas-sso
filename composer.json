@@ -12,9 +12,6 @@
             "Uoi\\FlarumCasSso\\": "src/"
         }
     },
-    "scripts": {
-        "build": "cd js && npm install && npm run build"
-    },
     "extra": {
         "flarum-extension": {
             "title": "University CAS SSO",
