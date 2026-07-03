@@ -1,9 +1,8 @@
 (function () {
   'use strict';
 
-  var app = flarum.core.compat['admin/app'];
-
-  app.initializers.add('uoi/flarum-cas-sso', function () {
+  flarum.extensions['uoi-cas-sso'] = {
+    extend: function (app) {
     app.extensionData
       .for('uoi-cas-sso')
       .registerSetting({
@@ -54,5 +53,6 @@
         help: app.translator.trans('uoi-cas-sso.admin.settings.disable_server_validation_help'),
         type: 'boolean',
       });
-  });
+    },
+  };
 })();
