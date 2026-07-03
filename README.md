@@ -48,3 +48,5 @@ For production, set the CAS CA certificate path to the CA certificate used to va
 
 - `/auth/cas` starts CAS login and creates or logs in the matching Flarum user.
 - `/auth/cas/logout` clears the Flarum session and redirects to CAS logout.
+
+The extension currently does not inject a login button into the Flarum frontend. Add a forum link or theme button pointing to `/auth/cas`.
