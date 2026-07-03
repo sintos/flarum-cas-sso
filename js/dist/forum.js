@@ -1,20 +1,27 @@
 (function () {
   'use strict';
 
-  flarum.core.compat.extend.extend(flarum.core.compat['components/LogInButtons'].prototype, 'items', function (items) {
+  var app = flarum.core.compat['forum/app'];
+  var extend = flarum.core.compat['common/extend'].extend;
+  var Button = flarum.core.compat['common/components/Button'];
+  var LogInButtons = flarum.core.compat['forum/components/LogInButtons'];
+
+  app.initializers.add('uoi/flarum-cas-sso', function () {
+    extend(LogInButtons.prototype, 'items', function (items) {
     items.add(
       'uoi-cas',
-      flarum.core.compat['components/Button'].component(
+      Button.component(
         {
           className: 'Button LogInButton LogInButton--uoi-cas',
           icon: 'fas fa-university',
           onclick: function () {
             var returnUrl = encodeURIComponent(window.location.href);
-            window.location.href = flarum.core.compat.app.forum.attribute('baseUrl') + '/auth/cas?return=' + returnUrl;
+            window.location.href = app.forum.attribute('baseUrl') + '/auth/cas?return=' + returnUrl;
           },
         },
-        flarum.core.compat.app.translator.trans('uoi-cas-sso.forum.log_in.with_cas_button')
+        app.translator.trans('uoi-cas-sso.forum.log_in.with_cas_button')
       )
     );
+    });
   });
 })();

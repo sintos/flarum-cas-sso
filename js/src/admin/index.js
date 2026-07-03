@@ -2,7 +2,7 @@ import app from 'flarum/admin/app';
 
 app.initializers.add('uoi/flarum-cas-sso', () => {
   app.extensionData
-    .for('uoi-flarum-cas-sso')
+    .for('uoi-cas-sso')
     .registerSetting({
       setting: 'uoi-cas-sso.cas_host',
       label: app.translator.trans('uoi-cas-sso.admin.settings.cas_host_label'),
